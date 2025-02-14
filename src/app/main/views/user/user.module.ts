@@ -43,7 +43,6 @@ import {ToolbarModule} from 'primeng/toolbar';
     ToolbarModule
   ],
   providers: [],
-  entryComponents: []
 })
 export class UserModule {
 }

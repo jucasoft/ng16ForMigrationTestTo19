@@ -15,14 +15,14 @@ export class UserEditComponent extends PopUpBaseComponent<User> {
   form: FormGroup;
   keys: string[];
 
-  setItemPerform(value: User): void {
+  override setItemPerform(value: User): void {
     const group = this.fb.group({});
     this.keys = Object.keys(value);
     this.keys.forEach(key => group.addControl(key, this.fb.control({value: value[key], disabled: key === 'id'})));
     this.form = group;
   }
 
-  acceptPerform(mutationParams: User): void {
+  override acceptPerform(mutationParams: User): void {
     if (mutationParams.id) {
       this.store$.dispatch(UserStoreActions.EditRequest({
         mutationParams, onResult: [

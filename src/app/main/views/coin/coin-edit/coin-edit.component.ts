@@ -15,14 +15,14 @@ export class CoinEditComponent extends PopUpBaseComponent<Coin> {
   form: FormGroup;
   keys: string[];
 
-  setItemPerform(value: Coin): void {
+  override setItemPerform(value: Coin): void {
     const group = this.fb.group({});
     this.keys = Object.keys(value);
     this.keys.forEach(key => group.addControl(key, this.fb.control({value: value[key], disabled: key === 'id'})));
     this.form = group;
   }
 
-  acceptPerform(mutationParams: Coin): void {
+  override acceptPerform(mutationParams: Coin): void {
     if (mutationParams.id) {
       this.store$.dispatch(CoinStoreActions.EditRequest({
         mutationParams, onResult: [
