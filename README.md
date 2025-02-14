@@ -1,27 +1,71 @@
 # Ng16ForMigrationTestTo19
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This project was generated with:
+
+```console
+npx @angular/cli@16 new ng16ForMigrationTestTo19   --routing true --style scss
+```
+```console
+cd ng16ForMigrationTestTo19
+```
+```console
+npm i @angular/cdk@v16
+```
+```console
+npm i @ngrx/store@v16 @ngrx/entity@v16 @ngrx/effects@v16 @ngrx/store-devtools@v16 @ngrx/router-store@v16 @ngrx/component@v16
+```
+```console
+npm i primeng@16
+```
+```console
+npm i primeicons primeflex
+```
+```console
+npx @angular/cli@16 add ngrx-entity-crud
+```
+```console
+ng generate ngrx-entity-crud:store --name=user --clazz=User --type=CRUD-PLURAL
+```
+```console
+ng generate ngrx-entity-crud:section --clazz=User --lib=primeng/plural
+```
+```console
+ng generate ngrx-entity-crud:store --name=coin --clazz=Coin --type=CRUD-PLURAL
+```
+```console
+ng generate ngrx-entity-crud:section --clazz=Coin --lib=primeng/plural
+```
+
+```console
+npm install json-server
+```
+```console
+make new file db.json
+```
+```
+(incollare il codice seguente nel file appena creato)
+{
+"coin": [
+{ "id": 1, "value": "10", "name": "xxxx", "description": "xxxx" },
+{ "id": 2, "value": "20", "name": "xxxx", "description": "xxxx" },
+{ "id": 3, "value": "30", "name": "xxxx", "description": "xxxx" }
+],
+"user": [
+{ "id": 1, "value": "10", "name": "xxxx", "description": "xxxx" },
+{ "id": 2, "value": "20", "name": "xxxx", "description": "xxxx" },
+{ "id": 3, "value": "30", "name": "xxxx", "description": "xxxx" }
+]
+}
+```
+### Pass it to JSON Server CLI
+```console
+npx json-server db.json
+```
+### Get a REST API
+```console
+Get a REST API
+```
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
