@@ -1,7 +1,13 @@
 # Ng16ForMigrationTestTo19
 
-This project was generated with:
-
+Information about my system:
+```console
+node v20.18.3
+npm 10.8.2
+so macOS
+```
+## Frontend Angular
+This project generated with the following commands:
 ```console
 npx @angular/cli@16 new ng16ForMigrationTestTo19   --routing true --style scss
 ```
@@ -21,10 +27,13 @@ npx @angular/cli@16 add ngrx-entity-crud
 ```console
 ng generate ngrx-entity-crud:store --name=user --clazz=User --type=CRUD-PLURAL
 ng generate ngrx-entity-crud:section --clazz=User --lib=primeng/plural
+
 ng generate ngrx-entity-crud:store --name=coin --clazz=Coin --type=CRUD-PLURAL
 ng generate ngrx-entity-crud:section --clazz=Coin --lib=primeng/plural
 ```
 
+## Backend
+Backend to test the application using the json-server library:
 ```console
 npm i json-server@^0.17.4
 ```
@@ -67,6 +76,7 @@ module.exports = (req, res, next) => {
 npx json-server db.json --middlewares ./middleware.js
 ```
 ### Get a REST API
+
 ```console
 curl http://localhost:3000/user
 ```
