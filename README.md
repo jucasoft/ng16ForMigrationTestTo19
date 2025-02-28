@@ -89,4 +89,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Additional parts
 ### Add eslint
-```npx @angular/cli@16 add angular-eslint```
+```console
+npx @angular/cli@16 add angular-eslint
+```
