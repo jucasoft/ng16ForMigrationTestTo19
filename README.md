@@ -92,3 +92,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ```console
 npx @angular/cli@16 add angular-eslint
 ```
+## Add Cypress Angular Schematic
+To install the schematic via cli arguments (installs both e2e and component testing):
+```console
+ng add @cypress/schematic --e2e --component
+```
+To run Cypress in open mode within your project:
+```console
+ng run {project-name}:cypress-open
+```
