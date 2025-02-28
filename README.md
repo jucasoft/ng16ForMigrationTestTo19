@@ -87,3 +87,6 @@ curl http://localhost:3000/coin
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Additional parts
+### Add eslint
+```npx @angular/cli@16 add angular-eslint```
